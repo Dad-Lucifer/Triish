@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 25th Silver Wedding Anniversary Design System
+   Colors: Burgundy, Champagne Gold, Silver, Ivory
+*/
+
+@layer base {
+  :root {
+    /* Ivory/Cream Background */
+    --background: 40 33% 98%;
+    --foreground: 340 30% 15%;
+
+    /* Card - Soft champagne tint */
+    --card: 40 40% 97%;
+    --card-foreground: 340 30% 15%;
+
+    --popover: 40 40% 97%;
+    --popover-foreground: 340 30% 15%;
+
+    /* Primary - Deep Burgundy/Wine */
+    --primary: 345 60% 30%;
+    --primary-foreground: 40 33% 98%;
+
+    /* Secondary - Champagne Gold */
+    --secondary: 38 50% 85%;
+    --secondary-foreground: 340 30% 15%;
+
+    /* Muted - Soft silver/gray */
+    --muted: 40 20% 92%;
+    --muted-foreground: 340 15% 45%;
+
+    /* Accent - Rose Gold */
+    --accent: 15 45% 75%;
+    --accent-foreground: 340 30% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 38 30% 85%;
+    --input: 38 30% 88%;
+    --ring: 345 60% 30%;
+
+    --radius: 0.5rem;
+
+    /* Custom Anniversary Colors */
+    --burgundy: 345 60% 30%;
+    --burgundy-light: 345 50% 45%;
+    --champagne: 38 50% 85%;
+    --champagne-dark: 38 45% 70%;
+    --silver: 220 10% 75%;
+    --silver-light: 220 10% 90%;
+    --gold: 42 70% 55%;
+    --ivory: 40 33% 98%;
+    --rose: 350 60% 65%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(345, 60%, 25%) 0%, hsl(345, 50%, 35%) 50%, hsl(15, 45%, 40%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(38, 50%, 75%) 0%, hsl(42, 70%, 60%) 50%, hsl(38, 50%, 75%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(40, 40%, 99%) 0%, hsl(40, 35%, 95%) 100%);
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(345 30% 20% / 0.15);
+    --shadow-elevated: 0 8px 30px -8px hsl(345 30% 20% / 0.2);
+    --shadow-glow: 0 0 40px -10px hsl(42, 70%, 55%, 0.4);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 340 30% 8%;
+    --foreground: 40 33% 95%;
+
+    --card: 340 25% 12%;
+    --card-foreground: 40 33% 95%;
+
+    --popover: 340 25% 12%;
+    --popover-foreground: 40 33% 95%;
+
+    --primary: 345 55% 55%;
+    --primary-foreground: 340 30% 8%;
+
+    --secondary: 38 35% 25%;
+    --secondary-foreground: 40 33% 95%;
+
+    --muted: 340 20% 18%;
+    --muted-foreground: 40 20% 65%;
+
+    --accent: 15 40% 35%;
+    --accent-foreground: 40 33% 95%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 340 20% 20%;
+    --input: 340 20% 20%;
+    --ring: 345 55% 55%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+  }
+}
+
+@layer components {
+  .text-display {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+  }
+
+  .text-elegant {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  .gradient-text {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .card-elegant {
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-soft);
+    border: 1px solid hsl(var(--champagne));
+  }
+
+  .divider-ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .divider-ornament::before,
+  .divider-ornament::after {
+    content: '';
+    height: 1px;
+    width: 60px;
+    background: linear-gradient(90deg, transparent, hsl(var(--gold)), transparent);
+  }
+}
+
+@layer utilities {
+  .animate-shimmer {
+    background: linear-gradient(
+      90deg,
+      hsl(var(--champagne)) 0%,
+      hsl(var(--gold)) 50%,
+      hsl(var(--champagne)) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 3s ease-in-out infinite;
+  }
+
+  @keyframes shimmer {
+    0%, 100% { background-position: 200% 0; }
+    50% { background-position: -200% 0; }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+}
