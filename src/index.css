@@ -127,7 +127,12 @@
     font-family: 'Montserrat', sans-serif;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: 'Cormorant Garamond', serif;
   }
 }
@@ -175,19 +180,24 @@
 
 @layer utilities {
   .animate-shimmer {
-    background: linear-gradient(
-      90deg,
-      hsl(var(--champagne)) 0%,
-      hsl(var(--gold)) 50%,
-      hsl(var(--champagne)) 100%
-    );
+    background: linear-gradient(90deg,
+        hsl(var(--champagne)) 0%,
+        hsl(var(--gold)) 50%,
+        hsl(var(--champagne)) 100%);
     background-size: 200% 100%;
     animation: shimmer 3s ease-in-out infinite;
   }
 
   @keyframes shimmer {
-    0%, 100% { background-position: 200% 0; }
-    50% { background-position: -200% 0; }
+
+    0%,
+    100% {
+      background-position: 200% 0;
+    }
+
+    50% {
+      background-position: -200% 0;
+    }
   }
 
   .animate-float {
@@ -195,7 +205,26 @@
   }
 
   @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  /* Remove number input spinners */
+  .no-spinner::-webkit-inner-spin-button,
+  .no-spinner::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .no-spinner {
+    -moz-appearance: textfield;
+    appearance: textfield;
   }
 }
