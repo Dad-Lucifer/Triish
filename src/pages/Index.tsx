@@ -39,7 +39,7 @@ const Index = () => {
           <div className="container max-w-4xl mx-auto">
             <SectionTitle 
               title="RSVP" 
-              subtitle="Please respond by 10st February, 2026"
+              subtitle="Please respond by 10th February, 2026"
             />
             <motion.div
               initial={{ opacity: 0, y: 30 }}
